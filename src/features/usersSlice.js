@@ -14,7 +14,11 @@ const initialState = {
 export const usersSlice = createSlice({
   name: 'users',
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    setSearch: (state, action) => {
+      state.searchData = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(allUsers.pending, (state) => {
@@ -34,6 +38,6 @@ export const usersSlice = createSlice({
   },
 });
 
-export const {} = usersSlice.actions;
+export const { setSearch } = usersSlice.actions;
 
 export default usersSlice.reducer;
