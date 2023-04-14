@@ -16,7 +16,7 @@ const Search = () => {
     <form onSubmit={handleSubmit}>
       <input
         placeholder="Search..."
-        className="h-12 w-64 border-2 border-black p-3"
+        className="h-12 w-64 border-2 border-black p-3 outline-none"
         value={searchData}
         onChange={handleSearch}
       />

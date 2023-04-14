@@ -18,6 +18,9 @@ export const usersSlice = createSlice({
     setSearch: (state, action) => {
       state.searchData = action.payload;
     },
+    setFilter: (state, action) => {
+      state.filterData = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -38,6 +41,6 @@ export const usersSlice = createSlice({
   },
 });
 
-export const { setSearch } = usersSlice.actions;
+export const { setSearch, setFilter } = usersSlice.actions;
 
 export default usersSlice.reducer;
