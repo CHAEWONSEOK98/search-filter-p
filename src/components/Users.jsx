@@ -19,17 +19,21 @@ const Users = () => {
     }
   }, [dispatch, error]);
 
-  const filteredData = usersData.filter((item) =>
-    item.userId.toString().includes(filterData)
+  // const filteredData = usersData.filter((item) =>
+  //   item.userId.toString().includes(filterData)
+  // );
+
+  const filteredData = usersData.filter(
+    (item) => item.userId.toString() === filterData
   );
-  console.log(filterData);
+
   const searchedData = usersData.filter((item) =>
     item.title.toLowerCase().includes(searchData)
   );
 
   return (
     <ul className="mt-10  grid w-full grid-cols-1 gap-5  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {filterData !== ''
+      {filterData !== '' && filterData !== 'all'
         ? filteredData.map((item, index) => (
             <li
               key={index}

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../features/usersSlice';
 
 const Filter = () => {
-  const userId = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+  const userId = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'all'];
   const [filterItem, setFilterItem] = useState('');
   const [dropdown, setDropdown] = useState(false);
 
